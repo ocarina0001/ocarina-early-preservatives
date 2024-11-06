@@ -12,6 +12,7 @@
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <recipeUsers>
             <li>TableStonecutter</li>
+            <li>CraftingSpot</li>
         </recipeUsers>
         <ingredients>
             <li>
@@ -35,7 +36,7 @@
             <disallowedThingDefs />
         </defaultIngredientFilter>
         <products>
-            <VCE_Salt>10</VCE_Salt>
+            <VCE_Salt>8</VCE_Salt>
         </products>
         <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
     </RecipeDef>
