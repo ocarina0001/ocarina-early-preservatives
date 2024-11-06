@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <packageId>ocarina.early.preservatives</packageId>
+    <name>Early Preservatives</name>
+    <author>ocarina0001</author>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    <description>This mod adds early-game preservatives.</description>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+        <li>vanillaexpanded.vcooke</li>
+    </loadAfter>
+</ModMetaData>

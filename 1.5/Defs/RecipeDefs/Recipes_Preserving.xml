@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <RecipeDef>
+        <defName>OCARINA_PreserveMeats</defName>
+        <label>preserve meats x20</label>
+        <description>Safely store meat chunks in a mason jar. Canning food extends its shelf life.</description>
+        <jobString>Preserve meats.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+        </recipeUsers>
+        <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>VCE_CannedMeat</li>
+                <li>VCE_CannedFish</li>
+                <li>OCARINA_PreservedMeat</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+        </defaultIngredientFilter>
+        <products>
+            <OCARINA_PreservedMeat>20</OCARINA_PreservedMeat>
+        </products>
+        <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>OCARINA_PreserveProduce</defName>
+        <label>preserve produce x20</label>
+        <description>Safely store vegetables in a mason jar. Canning food extends its shelf life.</description>
+        <jobString>Preserving produce.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+        <recipeUsers>
+            <li>FueledStove</li>
+            <li>ElectricStove</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>PlantFoodRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>RawBerries</li>
+                <li>VCE_CannedFruit</li>
+                <li>VCE_CannedProduce</li>
+                <li>OCARINA_PreservedProduce</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>PlantFoodRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>RawBerries</li>
+                <li>VCE_CannedFruit</li>
+                <li>VCE_CannedProduce</li>
+                <li>OCARINA_PreservedProduce</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+        </defaultIngredientFilter>
+        <products>
+            <OCARINA_PreservedProduce>20</OCARINA_PreservedProduce>
+        </products>
+        <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>OCARINA_PreserveFruit</defName>
+        <label>preserve fruit x20</label>
+        <description>Safely store fruit in a mason jar. Canning food extends its shelf life.</description>
+        <jobString>Preserving fruit.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+        <recipeUsers>
+            <li>FueledStove</li>
+            <li>ElectricStove</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawBerries</li>
+                    </thingDefs>
+                    <categories />
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+            <disallowedThingDefs>
+                <li>VCE_CannedFruit</li>
+                <li>OCARINA_PreservedFruit</li>
+            </disallowedThingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+            <disallowedThingDefs />
+        </defaultIngredientFilter>
+        <products>
+            <OCARINA_PreservedFruit>20</OCARINA_PreservedFruit>
+        </products>
+        <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+    </RecipeDef>
+
+</Defs>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef ParentName="MealBase" Name="OCARINA_PreservativeBase" Abstract="True">
+        <tradeability>Sellable</tradeability>
+        <stackLimit>75</stackLimit>
+        <statBases>
+            <WorkToMake>300</WorkToMake>
+            <Nutrition>0.05</Nutrition>
+            <Mass>0.06</Mass>
+        </statBases>
+        <rotatable>false</rotatable>
+        <ingestible>
+            <preferability>DesperateOnly</preferability>
+            <ingestSound>Meal_Eat</ingestSound>
+            <maxNumToIngestAtOnce>5</maxNumToIngestAtOnce>
+            <tasteThought>AteRawFood</tasteThought>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>120</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="OCARINA_PreservativeBase">
+        <defName>OCARINA_PreservedMeat</defName>
+        <label>preserved meat</label>
+        <description>Meat preserved and secured in a mason jar effectively extending shelf life. While edible cold right out of the can it's far more nourishing mixed into a meal and heated.\n\Preserved goods are intended as a way to preserve food and use it an an ingredient later, not as a final meal.</description>
+        <graphicData>
+            <texPath>Things/Items/Preservatives/PreservedMeat</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>3.0</MarketValue>
+        </statBases>
+        <thingCategories>
+            <li>MeatRaw</li>
+        </thingCategories>
+        <ingestible>
+            <ingestEffect>EatMeat</ingestEffect>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="OCARINA_PreservativeBase">
+        <defName>OCARINA_PreservedProduce</defName>
+        <label>preserved produce</label>
+        <description>Produce preserved and secured in a mason jar effectively extending shelf life. While edible cold right out of the can it's far more nourishing mixed into a meal and heated.\n\Preserved goods are intended as a way to preserve food and use it an an ingredient later, not as a final meal.</description>
+        <graphicData>
+            <texPath>Things/Items/Preservatives/PreservedProduce</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>2.5</MarketValue>
+        </statBases>
+        <thingCategories>
+            <li>PlantFoodRaw</li>
+        </thingCategories>
+        <ingestible>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>RawVegetable_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="OCARINA_PreservativeBase">
+        <defName>OCARINA_PreservedFruit</defName>
+        <label>preserved fruit</label>
+        <description>Fruit preserved and secured in a mason jar effectively extending shelf life. While edible cold right out of the can it's far more nourishing mixed into a meal and heated.\n\Preserved goods are intended as a way to preserve food and use it an an ingredient later, not as a final meal.</description>
+        <graphicData>
+            <texPath>Things/Items/Preservatives/PreservedFruit</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>6.0</MarketValue>
+        </statBases>
+        <thingCategories />
+        <ingestible>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>RawVegetable_Eat</ingestSound>
+            <tasteThought />
+        </ingestible>
+
+    </ThingDef>
+
+</Defs>
