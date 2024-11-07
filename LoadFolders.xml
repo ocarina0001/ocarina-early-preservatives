@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<loadFolders>
+<LoadFolders>
     <v1.5>
+        <li>/</li>
         <li>1.5</li>
-        <li IfModActive="vanillaexpanded.vcef">1.5/Mods/Vanilla Fishing Expanded</li>
     </v1.5>
-</loadFolders>
+</LoadFolders>

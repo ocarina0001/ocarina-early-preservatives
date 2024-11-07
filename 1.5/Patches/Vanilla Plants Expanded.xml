@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Plants Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName = "OCARINA_PreserveFruitBulk" or defName = "OCARINA_PreserveFruit"]/ingredients/li/filter/categories</xpath>
+                    <value>
+                        <li>VCE_Fruit</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName = "OCARINA_PreserveFruitBulk" or defName = "OCARINA_PreserveFruit"]/fixedIngredientFilter/categories</xpath>
+                    <value>
+                        <li>VCE_Fruit</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName = "OCARINA_PreserveFruitBulk" or defName = "OCARINA_PreserveFruit"]/defaultIngredientFilter/categories</xpath>
+                    <value>
+                        <li>VCE_Fruit</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
+            
