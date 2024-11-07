@@ -10,6 +10,7 @@
             <li>ElectricStove</li>
             <li>FueledStove</li>
             <li>CraftingSpot</li>
+            <li>VCE_CanningMachine</li>
         </recipeUsers>
         <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
         <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
@@ -260,7 +261,9 @@
                     <thingDefs>
                         <li>RawBerries</li>
                     </thingDefs>
-                    <categories />
+                    <categories>
+                        <li>VCE_Fruit</li>
+                    </categories>
                 </filter>
                 <count>1</count>
             </li>
@@ -285,6 +288,9 @@
             <thingDefs>
                 <li>RawBerries</li>
             </thingDefs>
+            <categories>
+                <li>VCE_Fruit</li>
+            </categories>
             <disallowedThingDefs>
                 <li>VCE_CannedFruit</li>
                 <li>OCARINA_PreservedFruit</li>
@@ -294,6 +300,9 @@
             <thingDefs>
                 <li>RawBerries</li>
             </thingDefs>
+            <categories>
+                <li>VCE_Fruit</li>
+            </categories>
             <disallowedThingDefs />
         </defaultIngredientFilter>
         <products>
@@ -312,7 +321,9 @@
                     <thingDefs>
                         <li>RawBerries</li>
                     </thingDefs>
-                    <categories />
+                    <categories>
+                        <li>VCE_Fruit</li>
+                    </categories>
                 </filter>
                 <count>4</count>
             </li>
@@ -337,12 +348,18 @@
             <thingDefs>
                 <li>RawBerries</li>
             </thingDefs>
+            <categories>
+                <li>VCE_Fruit</li>
+            </categories>
             <disallowedThingDefs>
                 <li>VCE_CannedFruit</li>
                 <li>OCARINA_PreservedFruit</li>
             </disallowedThingDefs>
         </fixedIngredientFilter>
         <defaultIngredientFilter>
+            <categories>
+                <li>VCE_Fruit</li>
+            </categories>
             <thingDefs>
                 <li>RawBerries</li>
             </thingDefs>

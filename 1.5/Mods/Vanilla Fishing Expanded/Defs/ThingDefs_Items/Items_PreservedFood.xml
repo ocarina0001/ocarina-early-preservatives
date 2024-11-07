@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="OCARINA_PreservativeBase">
+        <defName>OCARINA_PreservedFish</defName>
+        <label>preserved fish</label>
+        <description>Fish preserved and secured in a mason jar effectively extending shelf life. While edible cold right out of the can it's far more nourishing mixed into a meal and heated.\n\Preserved goods are intended as a way to preserve food and use it an an ingredient later, not as a final meal.</description>
+        <graphicData>
+            <texPath>Things/Items/Preservatives/PreservedFish</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>4.0</MarketValue>
+        </statBases>
+        <thingCategories>
+            <li>VCEF_RawFishCategory</li>
+        </thingCategories>
+        <ingestible>
+            <ingestEffect>EatMeat</ingestEffect>
+        </ingestible>
+    </ThingDef>
+
+</Defs>

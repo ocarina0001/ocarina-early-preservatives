@@ -2,5 +2,6 @@
 <loadFolders>
     <v1.5>
         <li>1.5</li>
+        <li IfModActive="vanillaexpanded.vcef">1.5/Mods/Vanilla Fishing Expanded</li>
     </v1.5>
 </loadFolders>

@@ -80,7 +80,6 @@
             <ingestSound>RawVegetable_Eat</ingestSound>
             <tasteThought />
         </ingestible>
-
     </ThingDef>
 
 </Defs>
