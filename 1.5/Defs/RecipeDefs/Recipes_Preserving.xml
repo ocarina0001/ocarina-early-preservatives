@@ -75,7 +75,7 @@
 
     <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
         <defName>OCARINA_PreserveMeatsBulk</defName>
-        <label>preserve meats x40</label>
+        <label>preserve meats x80</label>
         <description>Safely store meat chunks in a mason jar. Canning food extends its shelf life.</description>
         <jobString>Preserve meats.</jobString>
         <ingredients>

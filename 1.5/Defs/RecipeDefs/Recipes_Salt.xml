@@ -3,7 +3,7 @@
 
     <RecipeDef>
         <defName>OCARINA_ExtractSalt</defName>
-        <label>extract salt x10</label>
+        <label>extract salt x5</label>
         <description>Extract salt from stone chunks.</description>
         <jobString>Extracting salt.</jobString>
         <effectWorking>Cook</effectWorking>
@@ -36,7 +36,7 @@
             <disallowedThingDefs />
         </defaultIngredientFilter>
         <products>
-            <VCE_Salt>8</VCE_Salt>
+            <VCE_Salt>5</VCE_Salt>
         </products>
         <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
     </RecipeDef>
