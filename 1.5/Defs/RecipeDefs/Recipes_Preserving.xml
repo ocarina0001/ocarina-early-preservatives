@@ -327,10 +327,6 @@
                 <li>VCE_CannedFruit</li>
                 <li>OCARINA_PreservedFruit</li>
             </disallowedThingDefs>
-            <thingDefs>
-                <li>VCE_Salt</li>
-                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
-            </thingDefs>
         </fixedIngredientFilter>
         <defaultIngredientFilter>
             <thingDefs>
@@ -338,10 +334,6 @@
             </thingDefs>
             <categories />
             <disallowedThingDefs />
-            <thingDefs>
-                <li>VCE_Salt</li>
-                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
-            </thingDefs>
         </defaultIngredientFilter>
         <products>
             <OCARINA_PreservedFruit>20</OCARINA_PreservedFruit>
