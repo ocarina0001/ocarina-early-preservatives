@@ -29,6 +29,7 @@
                                     <filter>
                                         <thingDefs>
                                             <li>VCE_Salt</li>
+                                            <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
                                         </thingDefs>
                                     </filter>
                                     <count>1</count>
@@ -53,6 +54,10 @@
                                     <li>OCARINA_PreservedFish</li>
                                 </disallowedThingDefs>
                                 <disallowedCategories />
+                                <thingDefs>
+                                    <li>VCE_Salt</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                                </thingDefs>
                             </fixedIngredientFilter>
                             <defaultIngredientFilter>
                                 <categories>
@@ -63,6 +68,10 @@
                                     <li>Meat_Megaspider</li>
                                 </disallowedThingDefs>
                                 <disallowedCategories />
+                                <thingDefs>
+                                    <li>VCE_Salt</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                                </thingDefs>
                             </defaultIngredientFilter>
                             <products>
                                 <OCARINA_PreservedFish>20</OCARINA_PreservedFish>
@@ -111,6 +120,10 @@
                                     <li>OCARINA_PreservedFish</li>
                                 </disallowedThingDefs>
                                 <disallowedCategories />
+                                <thingDefs>
+                                    <li>VCE_Salt</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                                </thingDefs>
                             </fixedIngredientFilter>
                             <defaultIngredientFilter>
                                 <categories>
@@ -121,6 +134,10 @@
                                     <li>Meat_Megaspider</li>
                                 </disallowedThingDefs>
                                 <disallowedCategories />
+                                <thingDefs>
+                                    <li>VCE_Salt</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                                </thingDefs>
                             </defaultIngredientFilter>
                             <products>
                                 <OCARINA_PreservedFish>80</OCARINA_PreservedFish>

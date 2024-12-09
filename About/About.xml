@@ -11,4 +11,11 @@
         <li>Ludeon.RimWorld</li>
         <li>vanillaexpanded.vcooke</li>
     </loadAfter>
+    <modDependencies>
+        <li>
+            <packageId>vanillaexpanded.vcooke</packageId>
+            <displayName>Vanilla Cooking Expanded</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519</steamWorkshopUrl>
+        </li>
+    </modDependencies>
 </ModMetaData>
