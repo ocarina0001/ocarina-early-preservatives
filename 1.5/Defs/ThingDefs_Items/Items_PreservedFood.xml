@@ -41,6 +41,9 @@
         <ingestible>
             <ingestEffect>EatMeat</ingestEffect>
         </ingestible>
+        <thingCategories>
+            <li>MeatRaw</li>
+        </thingCategories>
     </ThingDef>
 
     <ThingDef ParentName="OCARINA_PreservativeBase">
@@ -61,6 +64,9 @@
             <ingestEffect>EatVegetarian</ingestEffect>
             <ingestSound>RawVegetable_Eat</ingestSound>
         </ingestible>
+        <thingCategories>
+            <li>PlantFoodRaw</li>
+        </thingCategories>
     </ThingDef>
 
     <ThingDef ParentName="OCARINA_PreservativeBase">
@@ -80,6 +86,9 @@
             <ingestSound>RawVegetable_Eat</ingestSound>
             <tasteThought />
         </ingestible>
+        <thingCategories>
+            <li>PlantFoodRaw</li>
+        </thingCategories>
     </ThingDef>
 
 </Defs>
