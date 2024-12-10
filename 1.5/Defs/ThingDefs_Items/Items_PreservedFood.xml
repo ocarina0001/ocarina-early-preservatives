@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <ThingDef ParentName="MealBase" Name="OCARINA_PreservativeBase" Abstract="True">
+    <ThingDef Name="OCARINA_PreservativeBaseIngredientless" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <selectable>true</selectable>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Flammability>1.0</Flammability>
+            <Beauty>0</Beauty>
+            <Mass>0.44</Mass>
+            <DeteriorationRate>10</DeteriorationRate>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>10</stackLimit>
+        <tickerType>Rare</tickerType>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <alwaysHaulable>true</alwaysHaulable>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+            <li Class="CompProperties_FoodPoisonable" />
+            <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_MetalhorrorInfectible" />
+        </comps>
+        <pathCost>14</pathCost>
+        <allowedArchonexusCount>40</allowedArchonexusCount>
+        <resourceReadoutPriority>Last</resourceReadoutPriority>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <uiIconForStackCount>1</uiIconForStackCount>
+        <ingestible>
+            <foodType>Meal</foodType>
+            <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+            <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+            <optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="OCARINA_PreservativeBaseIngredientless" Name="OCARINA_PreservativeBase" Abstract="True">
         <tradeability>Sellable</tradeability>
         <stackLimit>75</stackLimit>
         <statBases>
@@ -41,9 +78,6 @@
         <ingestible>
             <ingestEffect>EatMeat</ingestEffect>
         </ingestible>
-        <thingCategories>
-            <li>MeatRaw</li>
-        </thingCategories>
     </ThingDef>
 
     <ThingDef ParentName="OCARINA_PreservativeBase">
@@ -64,9 +98,6 @@
             <ingestEffect>EatVegetarian</ingestEffect>
             <ingestSound>RawVegetable_Eat</ingestSound>
         </ingestible>
-        <thingCategories>
-            <li>PlantFoodRaw</li>
-        </thingCategories>
     </ThingDef>
 
     <ThingDef ParentName="OCARINA_PreservativeBase">
@@ -86,9 +117,6 @@
             <ingestSound>RawVegetable_Eat</ingestSound>
             <tasteThought />
         </ingestible>
-        <thingCategories>
-            <li>PlantFoodRaw</li>
-        </thingCategories>
     </ThingDef>
 
 </Defs>

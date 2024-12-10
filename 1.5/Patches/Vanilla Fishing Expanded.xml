@@ -161,9 +161,6 @@
                             <ingestible>
                                 <ingestEffect>EatMeat</ingestEffect>
                             </ingestible>
-                            <thingCategories>
-                                <li>MeatRaw</li>
-                            </thingCategories>
                         </ThingDef>
 
                     </value>
