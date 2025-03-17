@@ -5,6 +5,7 @@
         <workSpeedStat>CookSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
         <allowMixingIngredients>true</allowMixingIngredients>
         <recipeUsers>
             <li>ElectricStove</li>
@@ -392,6 +393,108 @@
         <products>
             <OCARINA_PreservedFruit>80</OCARINA_PreservedFruit>
         </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>OCARINA_PreserveMeal</defName>
+        <label>preserve meal</label>
+        <description>Preserve a straightforward meal.</description>
+        <jobString>Preserving meal.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>0.55</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <OCARINA_PreservedMeal>1</OCARINA_PreservedMeal>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>CraftingSpot</li>
+            <li>VCE_CanningMachine</li>
+        </recipeUsers>
+        <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>OCARINA_PreserveMealBulk</defName>
+        <label>preserve meal x4</label>
+        <description>Preserve a straightforward meal.</description>
+        <jobString>Preserving meals.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>2.2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <products>
+            <OCARINA_PreservedMeal>4</OCARINA_PreservedMeal>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>CraftingSpot</li>
+            <li>VCE_CanningMachine</li>
+        </recipeUsers>
+        <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
     </RecipeDef>
 
 </Defs>

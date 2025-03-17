@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>OCARINA_AtePreservedMeal</defName>
+        <durationDays>1</durationDays>
+        <nullifyingTraits>
+            <li>Ascetic</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>ate preserved meal</label>
+                <description>I had to eat a tasteless meal from a jar. It isn't very appetizing.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>OCARINA_AtePreservedFood</defName>
+        <durationDays>1</durationDays>
+        <nullifyingTraits>
+            <li>Ascetic</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>ate preserved food</label>
+                <description>I had to eat preserved food from a jar. It isn't very appetizing.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>
