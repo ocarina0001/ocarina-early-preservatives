@@ -5,7 +5,6 @@
         <workSpeedStat>CookSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
-        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
         <allowMixingIngredients>true</allowMixingIngredients>
         <recipeUsers>
             <li>ElectricStove</li>
@@ -401,7 +400,6 @@
         <description>Preserve a straightforward meal.</description>
         <jobString>Preserving meal.</jobString>
         <workSpeedStat>CookSpeed</workSpeedStat>
-        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
@@ -452,7 +450,6 @@
         <description>Preserve a straightforward meal.</description>
         <jobString>Preserving meals.</jobString>
         <workSpeedStat>CookSpeed</workSpeedStat>
-        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
