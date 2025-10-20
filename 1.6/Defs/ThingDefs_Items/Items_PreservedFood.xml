@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef Name="OCARINA_PreservativeBaseIngredientless" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <selectable>true</selectable>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Flammability>1.0</Flammability>
+            <Beauty>0</Beauty>
+            <DeteriorationRate>10</DeteriorationRate>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <tickerType>Rare</tickerType>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <alwaysHaulable>true</alwaysHaulable>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+            <li Class="CompProperties_FoodPoisonable" />
+            <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_MetalhorrorInfectible" />
+        </comps>
+        <pathCost>14</pathCost>
+        <allowedArchonexusCount>75</allowedArchonexusCount>
+        <resourceReadoutPriority>Last</resourceReadoutPriority>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <uiIconForStackCount>1</uiIconForStackCount>
+        <ingestible>
+            <foodType>Meal</foodType>
+            <maxNumToIngestAtOnce>75</maxNumToIngestAtOnce>
+            <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+            <optimalityOffsetHumanlikes>12</optimalityOffsetHumanlikes>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="OCARINA_PreservativeBaseIngredientless" Name="OCARINA_PreservativeBase" Abstract="True">
+        <tradeability>Sellable</tradeability>
+        <stackLimit>75</stackLimit>
+        <statBases>
+            <WorkToMake>300</WorkToMake>
+            <Nutrition>0.05</Nutrition>
+            <Mass>0.06</Mass>
+        </statBases>
+        <rotatable>false</rotatable>
+        <ingestible>
+            <preferability>RawBad</preferability>
+            <ingestSound>Meal_Eat</ingestSound>
+            <!-- <maxNumToIngestAtOnce>5</maxNumToIngestAtOnce> -->
+            <tasteThought>OCARINA_AtePreservedFood</tasteThought>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>120</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="OCARINA_PreservativeBase">
+        <defName>OCARINA_PreservedMeat</defName>
+        <label>preserved meat</label>
+        <description>Meat preserved and secured in a mason jar effectively extending shelf life. While edible cold right out of the jar it's far more nourishing mixed into a meal and heated.\nPreserved goods are intended as a way to preserve food and use it an an ingredient later, not as a final meal.</description>
+        <graphicData>
+            <texPath>Things/Items/Preservatives/PreservedMeat</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>3.0</MarketValue>
+        </statBases>
+        <thingCategories>
+            <li>MeatRaw</li>
+        </thingCategories>
+        <ingestible>
+            <ingestEffect>EatMeat</ingestEffect>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="OCARINA_PreservativeBase">
+        <defName>OCARINA_PreservedProduce</defName>
+        <label>preserved produce</label>
+        <description>Produce preserved and secured in a mason jar effectively extending shelf life. While edible cold right out of the jar it's far more nourishing mixed into a meal and heated.\nPreserved goods are intended as a way to preserve food and use it an an ingredient later, not as a final meal.</description>
+        <graphicData>
+            <texPath>Things/Items/Preservatives/PreservedProduce</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>2.5</MarketValue>
+        </statBases>
+        <thingCategories>
+            <li>PlantFoodRaw</li>
+        </thingCategories>
+        <ingestible>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>RawVegetable_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="OCARINA_PreservativeBase">
+        <defName>OCARINA_PreservedFruit</defName>
+        <label>preserved fruit</label>
+        <description>Fruit preserved and secured in a mason jar effectively extending shelf life. While edible cold right out of the jar it's far more nourishing mixed into a meal and heated.\nPreserved goods are intended as a way to preserve food and use it an an ingredient later, not as a final meal.</description>
+        <graphicData>
+            <texPath>Things/Items/Preservatives/PreservedFruit</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>6.0</MarketValue>
+        </statBases>
+        <thingCategories>
+            <li>PlantFoodRaw</li>
+        </thingCategories>
+        <ingestible>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>RawVegetable_Eat</ingestSound>
+            <tasteThought />
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="MealBase">
+        <defName>OCARINA_PreservedMeal</defName>
+        <label>preserved meal</label>
+        <description>a basic meal preserved and secured in a mason jar effectively extending shelf life. Edible right of the jar, it's as nourishing as a basic, simple meal. People tend to not enjoy eating out of a jar though.</description>
+        <graphicData>
+            <texPath>Things/Items/Preservatives/PreservedMeal</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>10</MarketValue>
+            <WorkToMake>450</WorkToMake>
+            <Nutrition>0.9</Nutrition>
+        </statBases>
+        <thingCategories>
+            <li>PlantFoodRaw</li>
+        </thingCategories>
+        <ingestible>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+            <tasteThought>OCARINA_AtePreservedMeal</tasteThought>
+            <preferability>MealTerrible</preferability>
+        </ingestible>
+    </ThingDef>
+
+</Defs>

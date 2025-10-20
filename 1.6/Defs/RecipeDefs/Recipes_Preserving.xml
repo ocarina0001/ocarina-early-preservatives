@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <RecipeDef Abstract="True" Name="OCARINA_PreservationRecipeBase">
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>CraftingSpot</li>
+            <li>VCE_CanningMachine</li>
+        </recipeUsers>
+        <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+        <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
+        <defName>OCARINA_PreserveMeats</defName>
+        <label>preserve meats x20</label>
+        <description>Safely store meat chunks in a mason jar. Canning food extends its shelf life.</description>
+        <jobString>Preserve meats.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>VCE_CannedMeat</li>
+                <li>VCE_CannedFish</li>
+                <li>OCARINA_PreservedMeat</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+            <thingDefs>
+                <li>VCE_Salt</li>
+                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+            <thingDefs>
+                <li>VCE_Salt</li>
+                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <OCARINA_PreservedMeat>20</OCARINA_PreservedMeat>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
+        <defName>OCARINA_PreserveMeatsBulk</defName>
+        <label>preserve meats x80</label>
+        <description>Safely store meat chunks in a mason jar. Canning food extends its shelf life.</description>
+        <jobString>Preserve meats.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>VCE_CannedMeat</li>
+                <li>VCE_CannedFish</li>
+                <li>OCARINA_PreservedMeat</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+            <thingDefs>
+                <li>VCE_Salt</li>
+                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>MeatRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+            <thingDefs>
+                <li>VCE_Salt</li>
+                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <OCARINA_PreservedMeat>80</OCARINA_PreservedMeat>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
+        <defName>OCARINA_PreserveProduce</defName>
+        <label>preserve produce x20</label>
+        <description>Safely store vegetables in a mason jar. Canning food extends its shelf life.</description>
+        <jobString>Preserving produce.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>PlantFoodRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>RawBerries</li>
+                <li>VCE_CannedFruit</li>
+                <li>VCE_CannedProduce</li>
+                <li>OCARINA_PreservedProduce</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+            <thingDefs>
+                <li>VCE_Salt</li>
+                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>PlantFoodRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>RawBerries</li>
+                <li>VCE_CannedFruit</li>
+                <li>VCE_CannedProduce</li>
+                <li>OCARINA_PreservedProduce</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+            <thingDefs>
+                <li>VCE_Salt</li>
+                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <OCARINA_PreservedProduce>20</OCARINA_PreservedProduce>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
+        <defName>OCARINA_PreserveProduceBulk</defName>
+        <label>preserve produce x80</label>
+        <description>Safely store vegetables in a mason jar. Canning food extends its shelf life.</description>
+        <jobString>Preserving produce.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>PlantFoodRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>RawBerries</li>
+                <li>VCE_CannedFruit</li>
+                <li>VCE_CannedProduce</li>
+                <li>OCARINA_PreservedProduce</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+            <thingDefs>
+                <li>VCE_Salt</li>
+                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>PlantFoodRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>RawBerries</li>
+                <li>VCE_CannedFruit</li>
+                <li>VCE_CannedProduce</li>
+                <li>OCARINA_PreservedProduce</li>
+            </disallowedThingDefs>
+            <disallowedCategories />
+            <thingDefs>
+                <li>VCE_Salt</li>
+                <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <OCARINA_PreservedProduce>80</OCARINA_PreservedProduce>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
+        <defName>OCARINA_PreserveFruit</defName>
+        <label>preserve fruit x20</label>
+        <description>Safely store fruit in a mason jar. Canning food extends its shelf life.</description>
+        <jobString>Preserving fruit.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawBerries</li>
+                    </thingDefs>
+                    <categories />
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_RawSugar</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+            <categories />
+            <disallowedThingDefs>
+                <li>VCE_CannedFruit</li>
+                <li>OCARINA_PreservedFruit</li>
+            </disallowedThingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+            <categories />
+            <disallowedThingDefs />
+        </defaultIngredientFilter>
+        <products>
+            <OCARINA_PreservedFruit>20</OCARINA_PreservedFruit>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
+        <defName>OCARINA_PreserveFruitBulk</defName>
+        <label>preserve fruit x80</label>
+        <description>Safely store fruit in a mason jar. Canning food extends its shelf life.</description>
+        <jobString>Preserving fruit.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawBerries</li>
+                    </thingDefs>
+                    <categories />
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_RawSugar</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+            <categories />
+            <disallowedThingDefs>
+                <li>VCE_CannedFruit</li>
+                <li>OCARINA_PreservedFruit</li>
+            </disallowedThingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+            <categories />
+            <disallowedThingDefs />
+        </defaultIngredientFilter>
+        <products>
+            <OCARINA_PreservedFruit>80</OCARINA_PreservedFruit>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>OCARINA_PreserveMeal</defName>
+        <label>preserve meal</label>
+        <description>Preserve a straightforward meal.</description>
+        <jobString>Preserving meal.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>0.55</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <OCARINA_PreservedMeal>1</OCARINA_PreservedMeal>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>CraftingSpot</li>
+            <li>VCE_CanningMachine</li>
+        </recipeUsers>
+        <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>OCARINA_PreserveMealBulk</defName>
+        <label>preserve meal x4</label>
+        <description>Preserve a straightforward meal.</description>
+        <jobString>Preserving meals.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>2.2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_Salt</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <products>
+            <OCARINA_PreservedMeal>4</OCARINA_PreservedMeal>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>CraftingSpot</li>
+            <li>VCE_CanningMachine</li>
+        </recipeUsers>
+        <researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+    </RecipeDef>
+
+</Defs>

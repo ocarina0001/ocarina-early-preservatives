@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Fishing Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!-- Canned Fish -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
+                            <defName>OCARINA_PreserveFish</defName>
+                            <label>preserve fish x20</label>
+                            <description>Safely store fish chunks in a mason jar. Canning food extends its shelf life.</description>
+                            <jobString>Preserve fish.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>VCEF_RawFishCategory</li>
+                                        </categories>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>VCE_Salt</li>
+                                            <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>Steel</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <categories>
+                                    <li>VCEF_RawFishCategory</li>
+                                </categories>
+                                <disallowedThingDefs>
+                                    <li>VCE_CannedMeat</li>
+                                    <li>VCE_CannedFish</li>
+                                    <li>OCARINA_PreservedMeat</li>
+                                    <li>OCARINA_PreservedFish</li>
+                                </disallowedThingDefs>
+                                <disallowedCategories />
+                                <thingDefs>
+                                    <li>VCE_Salt</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                            <defaultIngredientFilter>
+                                <categories>
+                                    <li>VCEF_RawFishCategory</li>
+                                </categories>
+                                <disallowedThingDefs>
+                                    <li>Meat_Human</li>
+                                    <li>Meat_Megaspider</li>
+                                </disallowedThingDefs>
+                                <disallowedCategories />
+                                <thingDefs>
+                                    <li>VCE_Salt</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                                </thingDefs>
+                            </defaultIngredientFilter>
+                            <products>
+                                <OCARINA_PreservedFish>20</OCARINA_PreservedFish>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
+                            <defName>OCARINA_PreserveFishBulk</defName>
+                            <label>preserve fish x80</label>
+                            <description>Safely store fish chunks in a mason jar. Canning food extends its shelf life.</description>
+                            <jobString>Preserve fish.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>VCEF_RawFishCategory</li>
+                                        </categories>
+                                    </filter>
+                                    <count>4</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>VCE_Salt</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>4</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>Steel</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>4</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <categories>
+                                    <li>VCEF_RawFishCategory</li>
+                                </categories>
+                                <disallowedThingDefs>
+                                    <li>VCE_CannedMeat</li>
+                                    <li>VCE_CannedFish</li>
+                                    <li>OCARINA_PreservedMeat</li>
+                                    <li>OCARINA_PreservedFish</li>
+                                </disallowedThingDefs>
+                                <disallowedCategories />
+                                <thingDefs>
+                                    <li>VCE_Salt</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                            <defaultIngredientFilter>
+                                <categories>
+                                    <li>VCEF_RawFishCategory</li>
+                                </categories>
+                                <disallowedThingDefs>
+                                    <li>Meat_Human</li>
+                                    <li>Meat_Megaspider</li>
+                                </disallowedThingDefs>
+                                <disallowedCategories />
+                                <thingDefs>
+                                    <li>VCE_Salt</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
+                                </thingDefs>
+                            </defaultIngredientFilter>
+                            <products>
+                                <OCARINA_PreservedFish>80</OCARINA_PreservedFish>
+                            </products>
+                        </RecipeDef>
+
+                        <ThingDef ParentName="OCARINA_PreservativeBase">
+                            <defName>OCARINA_PreservedFish</defName>
+                            <label>preserved fish</label>
+                            <description>Fish preserved and secured in a mason jar effectively extending shelf life. While edible cold right out of the can it's far more nourishing mixed into a meal and heated.\n\Preserved goods are intended as a way to preserve food and use it an an ingredient later, not as a final meal.</description>
+                            <graphicData>
+                                <texPath>Things/Items/Preservatives/PreservedFish</texPath>
+                                <graphicClass>Graphic_StackCount</graphicClass>
+                            </graphicData>
+                            <statBases>
+                                <MarketValue>4.0</MarketValue>
+                            </statBases>
+                            <thingCategories>
+                                <li>VCEF_RawFishCategory</li>
+                            </thingCategories>
+                            <ingestible>
+                                <ingestEffect>EatMeat</ingestEffect>
+                            </ingestible>
+                        </ThingDef>
+
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
