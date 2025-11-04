@@ -19,7 +19,7 @@
     <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
         <defName>OCARINA_PreserveMeats</defName>
         <label>preserve meats x20</label>
-        <description>Safely store meat chunks in a mason jar. Canning food extends its shelf life.</description>
+        <description>Safely store meat chunks in a mason jar. Jarring food extends its shelf life.</description>
         <jobString>Preserve meats.</jobString>
         <ingredients>
             <li>
@@ -85,7 +85,7 @@
     <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
         <defName>OCARINA_PreserveMeatsBulk</defName>
         <label>preserve meats x80</label>
-        <description>Safely store meat chunks in a mason jar. Canning food extends its shelf life.</description>
+        <description>Safely store meat chunks in a mason jar. Jarring food extends its shelf life.</description>
         <jobString>Preserve meats.</jobString>
         <ingredients>
             <li>
@@ -151,7 +151,7 @@
     <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
         <defName>OCARINA_PreserveProduce</defName>
         <label>preserve produce x20</label>
-        <description>Safely store vegetables in a mason jar. Canning food extends its shelf life.</description>
+        <description>Safely store vegetables in a mason jar. Jarring food extends its shelf life.</description>
         <jobString>Preserving produce.</jobString>
         <ingredients>
             <li>
@@ -206,7 +206,9 @@
                 <li>VCE_CannedProduce</li>
                 <li>OCARINA_PreservedProduce</li>
             </disallowedThingDefs>
-            <disallowedCategories />
+            <disallowedCategories>
+                <li MayRequire="vanillaexpanded.vplantse">VCE_Fruit</li>
+            </disallowedCategories>
             <thingDefs>
                 <li>VCE_Salt</li>
                 <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
@@ -220,7 +222,7 @@
     <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
         <defName>OCARINA_PreserveProduceBulk</defName>
         <label>preserve produce x80</label>
-        <description>Safely store vegetables in a mason jar. Canning food extends its shelf life.</description>
+        <description>Safely store vegetables in a mason jar. Jarring food extends its shelf life.</description>
         <jobString>Preserving produce.</jobString>
         <ingredients>
             <li>
@@ -275,7 +277,9 @@
                 <li>VCE_CannedProduce</li>
                 <li>OCARINA_PreservedProduce</li>
             </disallowedThingDefs>
-            <disallowedCategories />
+            <disallowedCategories>
+                <li MayRequire="vanillaexpanded.vplantse">VCE_Fruit</li>
+            </disallowedCategories>
             <thingDefs>
                 <li>VCE_Salt</li>
                 <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Salt</li>
@@ -289,7 +293,7 @@
     <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
         <defName>OCARINA_PreserveFruit</defName>
         <label>preserve fruit x20</label>
-        <description>Safely store fruit in a mason jar. Canning food extends its shelf life.</description>
+        <description>Safely store fruit in a mason jar. Jarring food extends its shelf life.</description>
         <jobString>Preserving fruit.</jobString>
         <ingredients>
             <li>
@@ -297,7 +301,9 @@
                     <thingDefs>
                         <li>RawBerries</li>
                     </thingDefs>
-                    <categories />
+                    <categories>
+                        <li MayRequire="vanillaexpanded.vplantse">VCE_Fruit</li>
+                    </categories>
                 </filter>
                 <count>1</count>
             </li>
@@ -305,6 +311,7 @@
                 <filter>
                     <thingDefs>
                         <li>VCE_RawSugar</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Sugar</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -332,7 +339,9 @@
             <thingDefs>
                 <li>RawBerries</li>
             </thingDefs>
-            <categories />
+            <categories>
+                <li MayRequire="vanillaexpanded.vplantse">VCE_Fruit</li>
+            </categories>
             <disallowedThingDefs />
         </defaultIngredientFilter>
         <products>
@@ -343,7 +352,7 @@
     <RecipeDef ParentName="OCARINA_PreservationRecipeBase">
         <defName>OCARINA_PreserveFruitBulk</defName>
         <label>preserve fruit x80</label>
-        <description>Safely store fruit in a mason jar. Canning food extends its shelf life.</description>
+        <description>Safely store fruit in a mason jar. Jarring food extends its shelf life.</description>
         <jobString>Preserving fruit.</jobString>
         <ingredients>
             <li>
@@ -351,7 +360,9 @@
                     <thingDefs>
                         <li>RawBerries</li>
                     </thingDefs>
-                    <categories />
+                    <categories>
+                        <li MayRequire="vanillaexpanded.vplantse">VCE_Fruit</li>
+                    </categories>
                 </filter>
                 <count>4</count>
             </li>
@@ -359,6 +370,7 @@
                 <filter>
                     <thingDefs>
                         <li>VCE_RawSugar</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Sugar</li>
                     </thingDefs>
                 </filter>
                 <count>4</count>
@@ -386,7 +398,9 @@
             <thingDefs>
                 <li>RawBerries</li>
             </thingDefs>
-            <categories />
+            <categories>
+                <li MayRequire="vanillaexpanded.vplantse">VCE_Fruit</li>
+            </categories>
             <disallowedThingDefs />
         </defaultIngredientFilter>
         <products>
